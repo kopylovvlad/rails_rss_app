@@ -16,6 +16,7 @@ bundle install
 ## Running application
 
 ```
+bundle exec rake db:migrate
 bundle exec rake seed
 bundle exec rails s
 ```
