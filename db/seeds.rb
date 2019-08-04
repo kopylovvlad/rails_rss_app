@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-550.times do
+150.times do
   FactoryBot.create(:topic)
 end

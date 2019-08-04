@@ -1,5 +1,4 @@
 require 'ox'
-require 'pry'
 
 Ox::default_options[:with_xml] = true
 
@@ -15,13 +14,13 @@ module ActionView
         end
 
         def render(ox_object)
-          ::Ox.dump(ox_object, :with_xml => true)
+          ::Ox.dump(ox_object, render_options)
         end
 
         private
 
-        def foo
-          :foo
+        def render_options
+          { :with_xml => true }
         end
       end
     end

@@ -4,8 +4,6 @@ rss = Ox::Element.new('rss')
 rss[:version] = "2.0"
 doc << rss
 
-# render 'index3_partial', rss: rss
-
 channel = Ox::Element.new('channel')
 rss << channel
 

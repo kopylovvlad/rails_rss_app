@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title><%= 'My Company Blog1' %></title>
-    <description><%= 'This is a blog by My Company' %></description>
-    <link><%= '/' %></link>
-    <% @topics.each do |i| %>
-      <item>
-        <title><%= i.title %></title>
-        <subtitle><%= i.subtitle %></subtitle>
-        <description><%= i.description %></description>
-        <big_text><%= i.big_text %></big_text>
-        <rubric_id><%= i.rubric_id %></rubric_id>
-        <tag_id><%= i.tag_id %></tag_id>
-        <publication_at><%= i.publication_at %></publication_at>
-        <one_more_time><%= i.one_more_time %></one_more_time>
-      </item>
-    <% end %>
+  <title><%= 'My Company Blog1' %></title>
+  <description><%= 'This is a blog by My Company' %></description>
+  <link><%= '/' %></link>
+  <% @topics.each do |i| %>
+    <item>
+      <title><%= i.title %></title>
+      <subtitle><%= i.subtitle %></subtitle>
+      <description><%= i.description %></description>
+      <big_text><%= i.big_text %></big_text>
+      <rubric_id><%= i.rubric_id %></rubric_id>
+      <tag_id><%= i.tag_id %></tag_id>
+      <publication_at><%= i.publication_at %></publication_at>
+      <one_more_time><%= i.one_more_time %></one_more_time>
+    </item>
+  <% end %>
   </channel>
 </rss>

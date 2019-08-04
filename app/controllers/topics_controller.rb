@@ -1,18 +1,23 @@
 class TopicsController < ApplicationController
   def index1
-    # reorder('RANDOM()')
-    @topics = Topic.reorder(publication_at: :desc).limit(101)
+    @topics = get_topics
   end
 
   def index2
-    @topics = Topic.reorder(publication_at: :desc).limit(101)
+    @topics = get_topics
   end
 
   def index3
-    @topics = Topic.reorder(publication_at: :desc).limit(1)
+    @topics = get_topics
   end
 
-  def index4
-    @topics = Topic.reorder(publication_at: :desc).limit(1)
+  private
+
+  def limit
+    params[:limit] || 101
+  end
+
+  def get_topics
+    Topic.reorder(publication_at: :desc).limit(limit)
   end
 end
